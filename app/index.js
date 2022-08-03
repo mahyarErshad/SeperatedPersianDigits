@@ -21,3 +21,12 @@ button.addEventListener("click", (e) => {
   screen.innerHTML = newNumber;
   input.value = "";
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    const number = input.value;
+    const newNumber = separateNumber(number);
+    screen.innerHTML = newNumber;
+    input.value = "";
+  }
+});
