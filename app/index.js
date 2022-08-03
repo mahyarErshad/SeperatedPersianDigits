@@ -19,4 +19,5 @@ button.addEventListener("click", (e) => {
   const number = input.value;
   const newNumber = separateNumber(number);
   screen.innerHTML = newNumber;
+  input.value = "";
 });
