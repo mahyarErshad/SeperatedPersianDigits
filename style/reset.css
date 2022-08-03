@@ -1,4 +1,9 @@
+@font-face {
+  font-family: Vazir;
+  src: url(../assets/font/Vazir.eot);
+}
 * {
+  font-family: Vazir, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
