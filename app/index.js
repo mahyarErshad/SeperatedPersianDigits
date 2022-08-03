@@ -16,17 +16,23 @@ function separateNumber(number) {
 
 // events
 button.addEventListener("click", (e) => {
-  const number = input.value;
-  const newNumber = separateNumber(number);
-  screen.innerHTML = newNumber;
-  input.value = "";
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
+  if (input.value) {
     const number = input.value;
     const newNumber = separateNumber(number);
     screen.innerHTML = newNumber;
     input.value = "";
+  } else {
+    screen.innerHTML = "Input can't be empty";
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13 && input.value) {
+    const number = input.value;
+    const newNumber = separateNumber(number);
+    screen.innerHTML = newNumber;
+    input.value = "";
+  } else if (e.keyCode === 13 && !input.value) {
+    screen.innerHTML = "Input can't be empty";
   }
 });
